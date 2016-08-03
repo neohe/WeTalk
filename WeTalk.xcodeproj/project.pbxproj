@@ -13,6 +13,7 @@
 		3CA260D11D4F916D00F0FE31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CA260D01D4F916D00F0FE31 /* Assets.xcassets */; };
 		3CA260D41D4F916D00F0FE31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CA260D21D4F916D00F0FE31 /* LaunchScreen.storyboard */; };
 		3CA260DD1D4FAE4900F0FE31 /* TalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA260DC1D4FAE4900F0FE31 /* TalkViewController.swift */; };
+		3CC8D8E11D5258690008BA10 /* UITalkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC8D8E01D5258690008BA10 /* UITalkListViewController.swift */; };
 		6F6F7C5835D848D6CBD9353D /* libPods-WeTalk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 815C68F18083F594D9240A08 /* libPods-WeTalk.a */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		3CA260D51D4F916D00F0FE31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CA260DB1D4F9E4600F0FE31 /* BridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeHeader.h; sourceTree = "<group>"; };
 		3CA260DC1D4FAE4900F0FE31 /* TalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkViewController.swift; sourceTree = "<group>"; };
+		3CC8D8E01D5258690008BA10 /* UITalkListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITalkListViewController.swift; sourceTree = "<group>"; };
 		815C68F18083F594D9240A08 /* libPods-WeTalk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeTalk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BCF335A5B0841A6EA9E1C7 /* Pods-WeTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeTalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeTalk/Pods-WeTalk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 				3CA260CB1D4F916D00F0FE31 /* ViewController.swift */,
 				3CA260CD1D4F916D00F0FE31 /* Main.storyboard */,
 				3CA260DC1D4FAE4900F0FE31 /* TalkViewController.swift */,
+				3CC8D8E01D5258690008BA10 /* UITalkListViewController.swift */,
 				3CA260D01D4F916D00F0FE31 /* Assets.xcassets */,
 				3CA260D21D4F916D00F0FE31 /* LaunchScreen.storyboard */,
 				3CA260D51D4F916D00F0FE31 /* Info.plist */,
@@ -217,6 +220,7 @@
 			files = (
 				3CA260CC1D4F916D00F0FE31 /* ViewController.swift in Sources */,
 				3CA260DD1D4FAE4900F0FE31 /* TalkViewController.swift in Sources */,
+				3CC8D8E11D5258690008BA10 /* UITalkListViewController.swift in Sources */,
 				3CA260CA1D4F916D00F0FE31 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

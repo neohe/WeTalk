@@ -8,6 +8,10 @@
 
 import UIKit
 
+class TalkListViewController: RCConversationListViewController {
+    
+}
+
 class TalkViewController: RCConversationViewController {
     
     override func viewDidLoad() {
