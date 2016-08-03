@@ -18,6 +18,10 @@ class UITalkListViewController: RCConversationListViewController {
         super.didReceiveMemoryWarning()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        self.tabBarController?.tabBar.hidden = false
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         self.tabBarController?.tabBar.hidden = true
     }
