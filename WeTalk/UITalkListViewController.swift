@@ -9,5 +9,16 @@
 import UIKit
 
 class UITalkListViewController: RCConversationListViewController {
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        self.tabBarController?.tabBar.hidden = true
+    }
 }
