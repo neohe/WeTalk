@@ -9,9 +9,22 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, RCIMUserInfoDataSource {
 
     var window: UIWindow?
+    
+    func getUserInfoWithUserId(userId: String!, completion: ((RCUserInfo!) -> Void)!) {
+        let userInfo = RCUserInfo()
+        userInfo.userId = userId
+        
+        switch userId {
+        case "neohe":
+            userInfo.name = "Neo"
+            userInfo.portraitUri = "http://s.cn.bing.net/th?id=OJ.JX7nPQ7fl5mJjg&w=160&h=215&c=8&pid=MSNJVFeeds"
+        default:
+            print("nobody!")
+        }
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
