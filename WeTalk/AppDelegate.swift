@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RCIMUserInfoDataSource {
         default:
             print("nobody!")
         }
+        
+        return completion(userInfo)
     }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -35,11 +37,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RCIMUserInfoDataSource {
         // 初始化 appKey
         RCIM.sharedRCIM().initWithAppKey("6tnym1brnnyw7")
         
+        // 设置用户信息提供者为自己 AppDelegate
+        RCIM.sharedRCIM().userInfoDataSource = self
+        
         // 用 token 测试连接
         RCIM.sharedRCIM().connectWithToken("izLOwqJUsMJjr0ZTgc39cFdhuKXa9Cy0nmSKu+xhhDlHkpmsM1f/VboZ+Xef8wDF2DslI2+c+9Q3zQBoraGFSw==", success: { (_) in
             print("Connect Succeed")
             
-            let currentUser = RCUserInfo(userId: "neohe", name: "Neo", portrait: "_")
+            let currentUser = RCUserInfo(userId: "neohe", name: "Neo", portrait: nil)
             RCIMClient.sharedRCIMClient().currentUserInfo = currentUser
             
             }, error: { (_) in
