@@ -12,6 +12,12 @@ class UITalkListViewController: RCConversationListViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+        
+        appDelegate?.connectServer({ () -> Void in
+            print("connected successful!")
+        })
     }
     
     override func didReceiveMemoryWarning() {
