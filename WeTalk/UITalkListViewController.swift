@@ -27,6 +27,8 @@ class UITalkListViewController: RCConversationListViewController {
                 RCConversationType.ConversationType_PUBLICSERVICE.rawValue,
                 RCConversationType.ConversationType_PUSHSERVICE.rawValue
             ])
+            
+            self.refreshConversationTableViewIfNeeded()
         })
     }
     
