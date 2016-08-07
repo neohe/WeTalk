@@ -43,4 +43,16 @@ class UITalkListViewController: RCConversationListViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         self.tabBarController?.tabBar.hidden = true
     }
+    
+    override func onSelectedTableRow(conversationModelType: RCConversationModelType, conversationModel model: RCConversationModel!, atIndexPath indexPath: NSIndexPath!) {
+        let conVC = RCConversationViewController()
+        conVC.targetId = model.targetId
+        conVC.userName = model.conversationTitle
+        conVC.conversationType = RCConversationType.ConversationType_PRIVATE
+        conVC.title = model.conversationTitle
+        
+        self.navigationController?.pushViewController(conVC, animated: true)
+        
+        self.tabBarController?.tabBar.hidden = true
+    }
 }
