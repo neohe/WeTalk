@@ -17,6 +17,16 @@ class UITalkListViewController: RCConversationListViewController {
         
         appDelegate?.connectServer({ () -> Void in
             print("connected successful!")
+            self.setDisplayConversationTypes([
+                RCConversationType.ConversationType_APPSERVICE.rawValue,
+                RCConversationType.ConversationType_CHATROOM.rawValue,
+                RCConversationType.ConversationType_CUSTOMERSERVICE.rawValue,
+                RCConversationType.ConversationType_DISCUSSION.rawValue,
+                RCConversationType.ConversationType_GROUP.rawValue,
+                RCConversationType.ConversationType_PRIVATE.rawValue,
+                RCConversationType.ConversationType_PUBLICSERVICE.rawValue,
+                RCConversationType.ConversationType_PUSHSERVICE.rawValue
+            ])
         })
     }
     
