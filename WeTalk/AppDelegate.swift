@@ -40,7 +40,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RCIMUserInfoDataSource {
 
             let currentUser = RCUserInfo(userId: "neohe", name: "Neo", portrait: nil)
             RCIMClient.sharedRCIMClient().currentUserInfo = currentUser
+            
+            dispatch_async(dispatch_get_main_queue(), {() -> Void in
                 completion()
+            })
+            
             }, error: { (_) in
                 print("Connect Failed")
             }) {
